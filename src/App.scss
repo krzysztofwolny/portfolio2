@@ -1,0 +1,36 @@
+//fonts
+$font-primary: 'Nunito', sans-serif;
+
+//colors
+$color-grey-dark-2: #6D5D4B;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 8rem 1fr;
+}
