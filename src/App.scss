@@ -1,8 +1,11 @@
-//fonts
-$font-primary: 'Nunito', sans-serif;
+:root {
+  //fonts
+--font-primary: 'Nunito', sans-serif;
 
 //colors
-$color-grey-dark-2: #6D5D4B;
+--color-white: #fff;
+--color-primary: #AA4586;
+}
 
 
 *,
@@ -19,8 +22,8 @@ html {
 }
 
 body {
-  font-family: $font-primary;
-  color: $color-grey-dark-2;
+  font-family: var(--font-primary);
+  color: var(--color-white);
   font-weight: 300;
   line-height: 1.6;
 }
@@ -32,5 +35,5 @@ body {
 
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 8rem 1fr;
+  grid-template-columns: 10rem 1fr;
 }

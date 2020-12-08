@@ -1,0 +1,46 @@
+.MenuItem {
+    list-style: none;
+    height: 5rem;
+    margin-top: 1rem;
+    padding: .5rem;
+
+    display: flex;
+    justify-content: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        transition: transform 1s;
+    }
+
+    &:hover::before {
+        transform: scaleY(1);
+    }
+
+    &__svg {
+        height: 4rem;
+        width: 4rem;
+        fill: currentColor;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: white;
+            text-decoration: none;
+        } 
+    }
+
+    &__desc {
+        display: none;
+        &:hover {
+            display: inline-block;
+        }
+    }
+}

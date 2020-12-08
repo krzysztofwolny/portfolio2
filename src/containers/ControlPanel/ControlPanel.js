@@ -1,14 +1,16 @@
 import React from 'react'
 import './ControlPanel.scss';
 import SwitchLanguage from '../../components/SwitchLanguage/SwitchLanguage';
+import Logo from '../../components/Logo/Logo';
+import Menu from '../../components/Menu/Menu';
 
-import displayLanguage from '../../translations/translations';
+
 
 const ControlPanel = () => {
-    const text = displayLanguage();
     return(
         <div className="controlPanel">
-            {text.test}
+            <Logo />
+            <Menu />
             <SwitchLanguage />
         </div>
     );
