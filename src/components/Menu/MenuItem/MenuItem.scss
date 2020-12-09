@@ -7,40 +7,83 @@
     display: flex;
     justify-content: center;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 3px;
-        background-color: var(--color-primary);
-        transform: scaleY(0);
-        transition: transform 1s;
-    }
-
-    &:hover::before {
-        transform: scaleY(1);
-    }
-
     &__svg {
         height: 4rem;
         width: 4rem;
+        padding-top: 1rem;
         fill: currentColor;
+        position: relative;
+        z-index: 1000;
     }
 
     &__link {
+        width: 120%;
+        height: 5rem;
+        position: relative;
+
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+
         &:link,
         &:visited {
             color: white;
             text-decoration: none;
         } 
+
+        &:hover .MenuItem__desc {
+            display: inline-block;
+            animation-name: descEnter;
+            animation-duration: 1.1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes descEnter {
+            0% {
+                opacity: 0;
+                top: 1.1rem;
+                left: 0;
+            }
+            100% {
+                opacity: 1;
+                top: 1.1rem;
+                left: 7rem;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -3rem;
+            height: 100%;
+            width: 3px;
+            background-color: var(--color-primary);
+            transform: scaleY(0);
+            transition: transform .3s, width .4s .3s;
+        }
+    
+        &:hover::before {
+            transform: scaleY(1);
+            width: 450%;
+        }
+
     }
 
     &__desc {
+        font-size: 1.75rem;
+        width: 7rem;
+        z-index: 1000;
         display: none;
-        &:hover {
-            display: inline-block;
-        }
+        position: absolute;
+        top: 1.1rem;
+        left: 7rem;
+        opacity: 0;
+    }
+
+    &__wrap {
+        height: 5rem;
+        padding-right: 1.3rem;
+        position: relative;
     }
 }

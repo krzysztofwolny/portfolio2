@@ -6,7 +6,7 @@ const langEN = {
     MenuItem_itemName_AboutMe: 'AboutMe',
     MenuItem_itemName_Stack: 'Stack',
     MenuItem_itemName_Gallery: 'Gallery',
-    MenuItem_itemName_WebDev: 'WebDevelopment',
+    MenuItem_itemName_WebDev: 'WebApps',
     MenuItem_itemName_Contact: 'Contact',
 }
 
