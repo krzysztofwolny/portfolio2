@@ -1,7 +1,7 @@
 // key name is created this way: componentName_textDescription
 
 const langEN = {
-    test: 'Control Panel',
+    Logo_occupation: 'WebDev',
     SwitchLanguage_chooseLanguage: 'Choose language',
     MenuItem_itemName_AboutMe: 'AboutMe',
     MenuItem_itemName_Stack: 'Stack',

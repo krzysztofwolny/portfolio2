@@ -1,7 +1,17 @@
+@import '../../assets/scss/variables.scss';
+
 .SwitchLanguage {
     margin-bottom: 5rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-content: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 1 1 15vw;
+        //width: 15vw;
+        margin-bottom: 0;
+        margin-right: 3rem;
+        margin-left: 6%;
+    }
 }

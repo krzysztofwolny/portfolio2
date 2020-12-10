@@ -1,3 +1,5 @@
+@import '../../../assets/scss/variables.scss';
+
 .MenuItem {
     list-style: none;
     height: 5rem;
@@ -85,5 +87,57 @@
         height: 5rem;
         padding-right: 1.3rem;
         position: relative;
+    }
+}
+
+@media only screen and (max-width: $bp-medium) {
+    .MenuItem {
+        width: 10rem;
+        padding: 0;
+        margin-right: 3rem;
+    
+        &__svg {
+            height: 100%;
+            width: 100%;
+            margin-left: 0.2rem;
+            fill: var(--color-primary);
+        }
+    
+        &__link {
+            width: 4rem;
+
+            flex-direction: column;
+            align-content: center;
+            
+            &:hover .MenuItem__desc {
+                animation-name: none !important;
+                animation-duration: none !important;
+                animation-fill-mode: none !important;
+                color: $color-primary-hover;
+            }
+
+            &:hover .MenuItem__svg {
+                fill: $color-primary-hover;
+            }
+
+            &::before {
+                content: none !important;
+            }
+        }
+    
+        &__desc {
+            font-size: 1rem;
+            top: 5.3rem;
+            left: -0.3rem;
+            display: inline-block;
+            position: none;
+            opacity: 1;
+            width: 5rem;
+            text-align: center;
+        }
+
+        &__wrap {
+            padding-right: 0;
+        }
     }
 }

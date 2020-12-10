@@ -9,7 +9,7 @@ const Logo = () => {
         <div className="logo">
             <img src={myphoto} className="logo__photo"></img>
             <p className="logo__name">Krzysztof Wolny</p>
-            <p>{text.test}</p>
+            <p className="logo__ocupation">{text.Logo_occupation}</p>
         </div>
     );
 }

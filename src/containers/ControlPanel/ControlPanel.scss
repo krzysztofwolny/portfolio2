@@ -1,4 +1,4 @@
-@import "../../variables.scss";
+@import "../../assets/scss/variables.scss";
 
 .controlPanel {
     background-color: rgba(0, 0, 0, 1);
@@ -10,5 +10,7 @@
 
     @media only screen and (max-width: $bp-medium) {
         flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
     }
 }
