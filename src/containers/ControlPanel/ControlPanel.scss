@@ -1,7 +1,7 @@
 @import "../../assets/scss/variables.scss";
 
 .controlPanel {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: $color-menu-background;
 
     display: flex;
     flex-direction: column;

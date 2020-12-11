@@ -1,6 +1,11 @@
 @import '../../../../assets/scss/variables.scss';
 
 .MobileMenuButton {
+
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+
     &,
     &::before,
     &::after {
@@ -15,10 +20,37 @@
         content: "";
         position: absolute;
         left: 0;
-
+        transition: all .2s;
     }
 
-    &::before { top: -1rem; }
+    &::before { top: -1.2rem; }
 
-    &::after { top: 2rem; }
+    &::after { top: 1.2rem; }
+
+    &--active {
+        background-color: transparent;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before { 
+            transform: rotate(-45deg);
+            top: 0; 
+        }
+        &::after { 
+            transform: rotate(45deg);
+            top: 0; 
+        }
+    }
+
+    &__wrap {
+        height: 4rem;
+        width: 4rem;
+        position: relative;
+    }
 }

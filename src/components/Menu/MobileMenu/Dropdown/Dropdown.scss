@@ -1,0 +1,29 @@
+@import '../../../../assets/scss/variables';
+
+.Dropdown {
+    background-color: $color-menu-background;
+    box-shadow: -1px 2px 5px $color-menu-background;
+
+    width: 40vw;
+    position: absolute;
+    top: 5.8rem;
+    right: -3rem;
+
+    animation-name: dropdownEnter;
+    animation-duration: .5s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @keyframes dropdownEnter {
+        0% {
+            opacity: 0;
+            top: -5.8rem;
+        }
+        100% {
+            opacity: 1;
+            top: 5.8rem;
+        }
+    }
+}

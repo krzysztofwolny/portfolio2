@@ -1,0 +1,33 @@
+@import '../../../../../assets/scss/variables';
+
+.DropdownItem {
+    width: 100%;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    transition: all .3s;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $color-primary;
+    }
+
+    &:hover {
+        box-shadow: 1px 1px 18px $color-white inset;
+    }
+
+    display: flex;
+    justify-content: space-around;
+
+    &__svg {
+        height: 4rem;
+        width: 4rem;
+        fill: $color-white;
+    }
+
+    &__label {
+        color: $color-white;
+        padding-top: .6rem;
+        font-size: 1.75rem;
+        width: 40%;
+        text-align: center;
+    }
+}

@@ -1,3 +1,21 @@
 .MobileMenu {
+    margin-right: 3rem;
+    cursor: pointer;
     position: relative;
+
+    &:hover .MobileMenuButton::before {
+        top: -1.4rem;
+    }
+
+    &:hover .MobileMenuButton::after {
+        top: 1.4rem;
+    }
+
+    &:hover .MobileMenuButton--active::before {
+        top: 0;
+    }
+
+    &:hover .MobileMenuButton--active::after {
+        top: 0;
+    }
 }

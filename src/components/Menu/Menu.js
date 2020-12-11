@@ -1,18 +1,21 @@
 import React from 'react';
-import displayLanguage from '../../translations/translations';
 import './Menu.scss';
 import MenuItem from './MenuItem/MenuItem';
+import useMenuItemsList from '../../hooks/useMenuItemsList';
 
 const Menu = () => {
-    const text = displayLanguage();
+    const itemsList = useMenuItemsList();
+    const itemsGenerator = (itemsList) => {
+       const output = Object.keys(itemsList).map(item => {
+           console.log(itemsList[item].itemName);
+           return <MenuItem key={item} iconName={itemsList[item].iconName} itemName={itemsList[item].itemName} />
+       }); 
+       return output;
+    }
     return(
     <nav className="menu">
         <ul className="menu__nav">
-            <MenuItem iconName="icon-user" itemName={text.MenuItem_itemName_AboutMe} />
-            <MenuItem iconName="icon-rocket" itemName={text.MenuItem_itemName_Stack} />
-            <MenuItem iconName="icon-image" itemName={text.MenuItem_itemName_Gallery} />
-            <MenuItem iconName="icon-laptop" itemName={text.MenuItem_itemName_WebDev} />
-            <MenuItem iconName="icon-paper-plane" itemName={text.MenuItem_itemName_Contact} />
+            {itemsGenerator(itemsList)}
         </ul>
     </nav>
     );

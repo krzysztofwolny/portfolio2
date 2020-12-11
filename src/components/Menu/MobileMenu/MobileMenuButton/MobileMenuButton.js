@@ -1,10 +1,14 @@
 import React from 'react';
 import './MobileMenuButton.scss';
 
-const MobileMenuButton = () => {
+const MobileMenuButton = (props) => {
+    const ifClicked = props.active ? "MobileMenuButton MobileMenuButton--active" : "MobileMenuButton";
     return(
-        <span className="MobileMenuButton">
-        </span>
+        <div className="MobileMenuButton__wrap" onClick={props.clicked}>
+            <span className={ifClicked}>
+            </span>
+        </div>
+
     );
 }
 
