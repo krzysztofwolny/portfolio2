@@ -15,7 +15,7 @@ const ControlPanel = () => {
 
     return(
         <div className="controlPanel">
-            {width >= 650 ? <React.Fragment><Logo /><Menu /><SwitchLanguage /></React.Fragment> : <React.Fragment><Logo /><MobileMenu /></React.Fragment>}
+            {width >= 650 ? <React.Fragment><Logo /><Menu /><SwitchLanguage /></React.Fragment> : <React.Fragment><Logo /><SwitchLanguage /><MobileMenu /></React.Fragment>}
         </div>
     );
 }
