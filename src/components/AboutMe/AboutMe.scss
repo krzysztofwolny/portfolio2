@@ -1,0 +1,18 @@
+@import '../../assets/scss/variables.scss';
+
+.aboutMe {
+    background-image: linear-gradient( rgba(255, 255, 255,.9), rgba(255, 255, 255,.7)), url(../../assets/img/aboutme_background-medium.jpg);
+    color: $color-black;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
+    grid-template-rows: 20vh 50vh 30vh;
+    justify-content: center;
+    grid-auto-rows: 30rem;
+
+
+    @media only screen and (max-width: $bp-phone) {
+        background-image: linear-gradient( rgba(255, 255, 255,.95), rgba(255, 255, 255,.56)), url(../../assets/img/aboutme_background-small.jpg);
+    }
+}

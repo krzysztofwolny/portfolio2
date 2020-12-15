@@ -22,6 +22,8 @@
         width: 120%;
         height: 5rem;
         position: relative;
+        transform: scale(1);
+        transition: all .3s;
 
         display: flex;
         justify-content: space-around;
@@ -32,6 +34,14 @@
             color: white;
             text-decoration: none;
         } 
+
+        &:active {
+            color: $color-dark-grey;
+            transform: scale(.9);
+        }
+        &:active::before {
+            background-color: $color-primary-darker;
+        }
 
         &:hover .MenuItem__desc {
             display: inline-block;

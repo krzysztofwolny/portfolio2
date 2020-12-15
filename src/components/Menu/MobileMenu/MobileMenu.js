@@ -6,7 +6,10 @@ import Dropdown from './Dropdown/Dropdown';
 const MobileMenu = () => {
     const [ dropdownWillUnmount, setDropdownWillUnmount ] = useState(false);
     const [ iconClicked, setIconClicked ] = useState(false);
-    const showDropdown = iconClicked ? <Dropdown goingToUnmount={dropdownWillUnmount} /> : null;
+    const showDropdown = iconClicked ? <Dropdown 
+                                        goingToUnmount={dropdownWillUnmount} 
+                                        closeAfterClick={() => mountUnmountHandler(iconClicked)}
+                                        /> : null;
 
     const mountUnmountHandler = (iconClicked) => {
         if(iconClicked) {

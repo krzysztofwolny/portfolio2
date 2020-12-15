@@ -1,0 +1,16 @@
+@import '../../../assets/scss/variables';
+
+.cv {
+    grid-row: 2 / -1;
+    grid-column: 2 / 2;
+
+    background-color: $color-black;
+    margin: 3rem;
+    border-radius: 4rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+
+    @media only screen and (max-width: $bp-medium-small) {
+        grid-row: 4 / -1;
+        grid-column: 1 / 1;
+    }
+}

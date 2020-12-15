@@ -3,12 +3,17 @@ import './MenuItem.scss';
 
 import icons from '../../../assets/icons/sprite.svg'
 
+import { navigate } from 'hookrouter';
+
 const MenuItem = (props) => {
+    const goTo = (link) => {
+        navigate(link);
+    };
     
     return(
         <li className="MenuItem">
             <div className="MenuItem__wrap">
-                <a href="#" className="MenuItem__link">
+                <a href="#" className="MenuItem__link" onClick={() => goTo(props.linkName)}>
                     <svg className="MenuItem__svg">
                         <use xlinkHref={`${icons}#${props.iconName}`}></use>
                     </svg>

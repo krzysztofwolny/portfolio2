@@ -8,7 +8,12 @@ const Menu = () => {
     const itemsGenerator = (itemsList) => {
        const output = Object.keys(itemsList).map(item => {
            console.log(itemsList[item].itemName);
-           return <MenuItem key={item} iconName={itemsList[item].iconName} itemName={itemsList[item].itemName} />
+           return <MenuItem 
+                    key={item} 
+                    iconName={itemsList[item].iconName} 
+                    itemName={itemsList[item].itemName} 
+                    linkName={itemsList[item].linkName}
+                    />
        }); 
        return output;
     }
