@@ -1,7 +1,9 @@
 .introductionPhoto {
     float: left;
-    width: 50%;
+
+    height: 100%;
     margin-left: -7rem;
+    margin-right: 4rem;
     opacity: .6;
     shape-outside: polygon(0 0, 100% 0, 65% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
