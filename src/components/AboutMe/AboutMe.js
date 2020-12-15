@@ -1,14 +1,14 @@
 import React from 'react'
 import './AboutMe.scss';
 import CV from './CV/CV';
-import FavouriteWorks from './FavouriteWorks/FavouriteWorks';
+import Hobby from './Hobby/Hobby';
 import Introduction from './Introduction/Introduction';
 
 const AboutMe = () => {
     return(
         <div className="aboutMe">
             <Introduction />
-            <FavouriteWorks />
+            <Hobby />
             <CV />
         </div>
     );

@@ -1,0 +1,18 @@
+@import '../../../../assets/scss/variables';
+
+.hobbyItem {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    color: $color-primary;
+
+    &__svg {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-primary;
+    }
+
+    &__label {
+        text-align: center;
+    }
+}
