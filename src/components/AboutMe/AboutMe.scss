@@ -9,7 +9,7 @@
     grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
     grid-template-rows: 20vh 50vh 30vh;
     justify-content: center;
-    grid-auto-rows: 30rem;
+    grid-auto-rows: 100rem;
 
 
     @media only screen and (max-width: $bp-phone) {

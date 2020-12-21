@@ -2,7 +2,8 @@
 
 .hobbyItem {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 2rem;
     align-content: center;
     color: $color-primary;
 
@@ -13,6 +14,9 @@
     }
 
     &__label {
+        width: 60%;
+        margin-top: 0.5rem;
+        font-size: 1.3rem;
         text-align: center;
     }
 }

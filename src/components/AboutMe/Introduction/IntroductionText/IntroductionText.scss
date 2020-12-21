@@ -13,11 +13,22 @@
         font-size: 1.25vw;
     }
 
+    @media only screen and (max-width: 1000px) and (min-width: $bp-medium-small) {
+        font-size: 1.5rem;
+        width: 80%;
+        margin-top: 4rem;
+        margin-left: 4rem;
+    }
+
     @media only screen and (max-width: $bp-medium-small) {
         font-size: 1.8vw;
     }
 
     @media only screen and (max-width: $bp-phone) {
         font-size: 1.2rem;
+    }
+
+    @media only screen and (max-width: $bp-phone-small) {
+        font-size: 0.8rem;
     }
 }
