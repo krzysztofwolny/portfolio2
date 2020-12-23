@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Contact.scss';
 import emailjs from 'emailjs-com';
 import displayLanguage from '../../translations/translations';
@@ -88,42 +88,54 @@ const Contact = () => {
         validMessage: false,
     })
     
+    useEffect(() => {
+        console.log(validFields)
+    }, [validFields]);
 
-    //ogólnie to tutaj nie działa, bo trzeba kliknąć wyślij drugi raz, żeby walidacja przeszła
-    //korzysta z nieaktualnego stanu
-    //próbowałeś juz zrobić validację na onChange ale wgl się sypało ostro xD
     const validateMessage = () => {
         let readyToSend;
         const copyValidFields = { ...validFields };
         
-            if (messageToSend.email.length !== 0) { 
-                setValidFields({
-                ...copyValidFields,
-                validEmail: true,
-                });
-            };
+        const validEmail = messageToSend.email.length !== 0 ? true : false;
+        const validTopic = messageToSend.topic.length !== 0 ? true : false;
+        const validMessage = messageToSend.message.length !== 0 ? true : false;
 
-            if (messageToSend.topic.length !== 0) { 
-                setValidFields({
-                ...copyValidFields,
-                validTopic: true,
-                });
-            };
-
-            if (messageToSend.message.length !== 0) { 
-                setValidFields({
-                ...copyValidFields,
-                validMessage: true,
-                });
-            };
-
-        console.log(copyValidFields);
-
-        if(validFields.validEmail && validFields.validTopic && validFields.validMessage) {
+        if(validEmail && validTopic && validMessage) {
             readyToSend = true;
         } else {
             readyToSend = false;
         }
+
+        const validationInformation = () => {
+            if(!validEmail) {
+                console.log("uzupełnij email");
+            } else {
+                setValidFields({
+                    ...copyValidFields,
+                    validEmail: validEmail,
+                })
+            };
+    
+            if(!validTopic) {
+                console.log("uzupełnij temat");
+            } else {
+                setValidFields({
+                    ...copyValidFields,
+                    validTopic: validTopic,
+                })
+            }
+    
+            if(!validMessage) {
+                console.log("uzupełnij wiadomość");
+            } else {
+                setValidFields({
+                    ...copyValidFields,
+                    validMessage: validMessage,
+                })
+            }
+        }
+        validationInformation();
+        console.log(readyToSend);
         return readyToSend;
     };
 
@@ -155,6 +167,9 @@ const Contact = () => {
     return(
         <div className="contact__wrap">
             <div className="contact">
+                {validFields.validEmail ? null : "uzupelnij email"}
+                {validFields.validTopic ? null : "uzupelnij temat"}
+                {validFields.validMessage ? null : "uzupelnij wiadomosc"}
                 <form className="contact__form">
                     {printInputFields(inputFields)}
                 </form>
