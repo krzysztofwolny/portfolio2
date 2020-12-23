@@ -7,7 +7,6 @@ const Menu = () => {
     const itemsList = useMenuItemsList();
     const itemsGenerator = (itemsList) => {
        const output = Object.keys(itemsList).map(item => {
-           console.log(itemsList[item].itemName);
            return <MenuItem 
                     key={item} 
                     iconName={itemsList[item].iconName} 

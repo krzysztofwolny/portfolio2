@@ -48,6 +48,13 @@ const langEN = {
     CV_job4_skill1: 'Adobe Illustrator',
     CV_job4_skill2: 'Adobe Photoshop',
     CV_job4_skill3: 'Photography',
+    Contact_email_inputLabel: 'Your email',
+    Contact_email_inputPlaceHolder: 'Enter email',
+    Contact_topic_inputLabel: 'Topic',
+    Contact_topic_inputPlaceHolder: 'Enter your topic',
+    Contact_message_inputLabel: 'Message',
+    Contact_message_inputPlaceHolder: 'Enter your message',
+    Contact_button: 'Send',
 }
 
 export default langEN;
