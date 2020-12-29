@@ -55,6 +55,9 @@ const langPL = {
     Contact_message_inputLabel: 'Wiadomość',
     Contact_message_inputPlaceHolder: 'Napisz wiadomość',
     Contact_button: 'Wyślij',
+    Contact_validation_email: 'Niepoprawny e-mail',
+    Contact_validation_topic: 'Wpisz conajmniej 5 znaków',
+    Contact_validation_message: 'Wpisz conajmniej 10 znaków',
 }
 
 export default langPL;
