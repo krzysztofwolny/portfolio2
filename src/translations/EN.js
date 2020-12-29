@@ -55,6 +55,9 @@ const langEN = {
     Contact_message_inputLabel: 'Message',
     Contact_message_inputPlaceHolder: 'Enter your message',
     Contact_button: 'Send',
+    Contact_validation_email: 'Invalid e-mail',
+    Contact_validation_topic: 'Input at least 5 signs',
+    Contact_validation_message: 'Input at least 10 signs',
 }
 
 export default langEN;

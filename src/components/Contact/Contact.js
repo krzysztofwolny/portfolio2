@@ -11,10 +11,15 @@ const Contact = () => {
         topic: '',
         message: '',
     });
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(true);
     const [sendingStatus, setSendingStatus] = useState({
         responseStatus: '',
         success: false,
+    });
+    const [validFields, setValidFields] = useState({
+        validEmail: 0,
+        validTopic: 0,
+        validMessage: 0,
     });
 
     const inputFields = {
@@ -26,6 +31,8 @@ const Contact = () => {
             inputPlaceHolder: text.Contact_email_inputPlaceHolder,
             class: 'contact__email',
             inputArea: 'input',
+            validationMessage: text.Contact_validation_email,
+            validationStateKey: validFields.validEmail,
         },
         topic: {
             labelFor: 'topic',
@@ -35,6 +42,8 @@ const Contact = () => {
             inputPlaceHolder: text.Contact_topic_inputPlaceHolder,
             class: 'contact__topic',
             inputArea: 'input',
+            validationMessage: text.Contact_validation_topic,
+            validationStateKey: validFields.validTopic,
         },
         message: {
             labelFor: 'message',
@@ -44,15 +53,18 @@ const Contact = () => {
             inputPlaceHolder: text.Contact_message_inputPlaceHolder,
             class: 'contact__message',
             inputArea: 'textarea',
+            validationMessage: text.Contact_validation_message,
+            validationStateKey: validFields.validMessage,
         }
     }
 
     const printInputFields = (fieldsData) => {
         const form = Object.keys(fieldsData).map(el => {
-            const CustomTag = `${fieldsData[el].inputArea}`
+            const CustomTag = `${fieldsData[el].inputArea}`;
+            const fieldValidation = fieldsData[el].validationStateKey >= 2 ? <span className="contact__validation">{fieldsData[el].validationMessage}</span> : null;
             return(
                 <React.Fragment>
-                    <label className="contact__label" for={fieldsData[el].labelFor}>{fieldsData[el].inputLabel}</label>
+                    <label className="contact__label" for={fieldsData[el].labelFor}>{fieldsData[el].inputLabel} {fieldValidation}</label>
                     <CustomTag 
                         className={'contact__input' + ' ' + fieldsData[el].class}
                         type={fieldsData[el].inputType} 
@@ -81,12 +93,6 @@ const Contact = () => {
     }
 
     const printModal = showModal ? <ContactModal changeStatus={modalOff} info={sendingStatus.success} /> : null;
-
-    const [validFields, setValidFields] = useState({
-        validEmail: false,
-        validTopic: false,
-        validMessage: false,
-    })
     
     useEffect(() => {
         console.log(validFields)
@@ -96,54 +102,46 @@ const Contact = () => {
         let readyToSend;
         const copyValidFields = { ...validFields };
         
-        const validEmail = messageToSend.email.length !== 0 ? true : false;
-        const validTopic = messageToSend.topic.length !== 0 ? true : false;
-        const validMessage = messageToSend.message.length !== 0 ? true : false;
+        //  0 - never used, 1- valid, 2 - invlid
+        const emailValidator = () => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            const validationEmailCheck = re.test(String(messageToSend.email).toLowerCase());
+            console.log(validationEmailCheck);
+            if (validationEmailCheck) {
+                return 1;
+            } else {
+                return 2;
+            }
+        };
 
-        if(validEmail && validTopic && validMessage) {
+        const validEmail = emailValidator();
+        const validTopic = messageToSend.topic.length >= 5 ? 1 : 2;
+        const validMessage = messageToSend.message.length >= 10 ? 1 : 2;
+
+        if(validEmail === 1 && validTopic === 1 && validMessage === 1) {
             readyToSend = true;
         } else {
             readyToSend = false;
         }
 
         const validationInformation = () => {
-            if(!validEmail) {
-                console.log("uzupełnij email");
-            } else {
                 setValidFields({
                     ...copyValidFields,
                     validEmail: validEmail,
-                })
-            };
-    
-            if(!validTopic) {
-                console.log("uzupełnij temat");
-            } else {
-                setValidFields({
-                    ...copyValidFields,
                     validTopic: validTopic,
-                })
-            }
-    
-            if(!validMessage) {
-                console.log("uzupełnij wiadomość");
-            } else {
-                setValidFields({
-                    ...copyValidFields,
                     validMessage: validMessage,
-                })
-            }
+                });
         }
         validationInformation();
         console.log(readyToSend);
         return readyToSend;
     };
 
-    const sendMessage = (event) => {
+    const sendMessage = async (event) => {
         event.preventDefault();
         if(validateMessage()) {        
         const userID = 'user_7fbn9gqTydDQy6qAVPjsx';
-        emailjs.send('gmail', 'template_1jpadfx', messageToSend, userID)
+        await emailjs.send('gmail', 'template_1jpadfx', messageToSend, userID)
         .then( response => {
             setShowModal(true);
             setSendingStatus({
@@ -162,19 +160,16 @@ const Contact = () => {
         }
     }
 
-
+//pamiętaj, że modal musi ustawiać state do stanu domyślnego!
 
     return(
         <div className="contact__wrap">
             <div className="contact">
-                {validFields.validEmail ? null : "uzupelnij email"}
-                {validFields.validTopic ? null : "uzupelnij temat"}
-                {validFields.validMessage ? null : "uzupelnij wiadomosc"}
+                {printModal}
                 <form className="contact__form">
                     {printInputFields(inputFields)}
                 </form>
                 <button className="contact__button" onClick={(event) => sendMessage(event)}>{text.Contact_button}</button>
-                {printModal}
             </div>
         </div>
     );
