@@ -58,6 +58,9 @@ const langPL = {
     Contact_validation_email: 'Niepoprawny e-mail',
     Contact_validation_topic: 'Wpisz conajmniej 5 znaków',
     Contact_validation_message: 'Wpisz conajmniej 10 znaków',
+    ContactModal_Response_Success: 'Dziękuję za wiadomość! Odpowiem najszybciej jak to będzie możliwe.',
+    ContactModal_Response_Fail: 'Niestety, nie udało się wysłać wiadomości.',
+    Stack_mainLabel: 'Technologie, z których korzystam.',
 }
 
 export default langPL;

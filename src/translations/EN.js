@@ -58,6 +58,9 @@ const langEN = {
     Contact_validation_email: 'Invalid e-mail',
     Contact_validation_topic: 'Input at least 5 signs',
     Contact_validation_message: 'Input at least 10 signs',
+    ContactModal_Response_Success: 'Thanks for sending me a message. I will response as soon as passible.',
+    ContactModal_Response_Fail: 'Something went wrong!',
+    Stack_mainLabel: 'Technologies that I use.',
 }
 
 export default langEN;

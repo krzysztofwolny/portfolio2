@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import routes from './routes/routes';
 import { useRoutes } from 'hookrouter';

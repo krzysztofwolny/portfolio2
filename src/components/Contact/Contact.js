@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Contact.scss';
 import emailjs from 'emailjs-com';
 import displayLanguage from '../../translations/translations';
@@ -11,7 +11,7 @@ const Contact = () => {
         topic: '',
         message: '',
     });
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
     const [sendingStatus, setSendingStatus] = useState({
         responseStatus: '',
         success: false,
@@ -27,6 +27,7 @@ const Contact = () => {
             labelFor: 'email',
             inputType: 'email',
             inputName: 'email',
+            inputValue: messageToSend.email,
             inputLabel: text.Contact_email_inputLabel,
             inputPlaceHolder: text.Contact_email_inputPlaceHolder,
             class: 'contact__email',
@@ -38,6 +39,7 @@ const Contact = () => {
             labelFor: 'topic',
             inputType: 'text',
             inputName: 'topic',
+            inputValue: messageToSend.topic,
             inputLabel: text.Contact_topic_inputLabel,
             inputPlaceHolder: text.Contact_topic_inputPlaceHolder,
             class: 'contact__topic',
@@ -49,6 +51,7 @@ const Contact = () => {
             labelFor: 'message',
             inputType: 'text',
             inputName: 'message',
+            inputValue: messageToSend.message,
             inputLabel: text.Contact_message_inputLabel,
             inputPlaceHolder: text.Contact_message_inputPlaceHolder,
             class: 'contact__message',
@@ -67,6 +70,7 @@ const Contact = () => {
                     <label className="contact__label" for={fieldsData[el].labelFor}>{fieldsData[el].inputLabel} {fieldValidation}</label>
                     <CustomTag 
                         className={'contact__input' + ' ' + fieldsData[el].class}
+                        value={fieldsData[el].inputValue}
                         type={fieldsData[el].inputType} 
                         id={fieldsData[el].inputName} 
                         name={fieldsData[el].inputName} 
@@ -90,14 +94,27 @@ const Contact = () => {
 
     const modalOff = () => {
         setShowModal(false);
+        setMessageToSend({
+            email: '',
+            topic: '',
+            message: '',
+        });
+        setValidFields({
+            validEmail: 0,
+            validTopic: 0,
+            validMessage: 0,
+        });
+        setSendingStatus({
+            responseStatus: '',
+            success: false,
+        });
     }
 
-    const printModal = showModal ? <ContactModal changeStatus={modalOff} info={sendingStatus.success} /> : null;
+    const printModal = showModal ? <ContactModal 
+                                    closeModal={modalOff}  
+                                    status={sendingStatus.success}
+                                    /> : null;
     
-    useEffect(() => {
-        console.log(validFields)
-    }, [validFields]);
-
     const validateMessage = () => {
         let readyToSend;
         const copyValidFields = { ...validFields };
@@ -138,7 +155,7 @@ const Contact = () => {
     };
 
     const sendMessage = async (event) => {
-        event.preventDefault();
+        //event.preventDefault();
         if(validateMessage()) {        
         const userID = 'user_7fbn9gqTydDQy6qAVPjsx';
         await emailjs.send('gmail', 'template_1jpadfx', messageToSend, userID)
