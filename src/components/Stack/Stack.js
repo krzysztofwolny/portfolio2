@@ -8,47 +8,47 @@ const Stack = () => {
 
     const stackItems = [
         {
-            image: 'html5',
+            image: 'html5.png',
             name: 'HTML5'
         },
         {
-            image: 'css3',
+            image: 'css3.png',
             name: 'CSS3'
         },
         {
-            image: 'js',
+            image: 'js.png',
             name: 'JavaScript ES6'
         },
         {
-            image: 'sass',
+            image: 'sass.png',
             name: 'Sass/SCSS'
         },
         {
-            image: 'react',
+            image: 'react.png',
             name: 'React'
         },
         {
-            image: 'redux',
+            image: 'redux.png',
             name: 'Redux'
         },
         {
-            image: 'node',
+            image: 'node.png',
             name: 'Node.js'
         },
         {
-            image: 'express',
+            image: 'expressjs.png',
             name: 'Express'
         },
         {
-            image: 'mongoDB',
+            image: 'mongoDB.png',
             name: 'MongoDB'
         },
         {
-            image: 'git',
+            image: 'git.png',
             name: 'GIT & Github'
         },
         {
-            image: 'npm',
+            image: 'npm.png',
             name: 'npm'
         },
     ];

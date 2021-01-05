@@ -28,6 +28,11 @@
 
     &__logos {
         width: 100%;
-        height: min-content;
+        height: 80%;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+        //grid-template-rows: repeat(auto-fit, minmax(100%, 1fr));
+        grid-gap: 2rem;
     }
 }
