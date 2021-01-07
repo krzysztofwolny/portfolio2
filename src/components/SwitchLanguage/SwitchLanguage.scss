@@ -19,4 +19,11 @@
         flex: 0 1 10vw;
         margin-right: -20vw;
     }
+
+    &__select {
+        appearance: none;
+        color: $color-primary;
+        background-color: $color-menu-background;
+        border: 1px solid $color-primary;
+    }
 }

@@ -16,7 +16,7 @@ const menuItemsList = () => {
         gallery: { 
             iconName: 'icon-image',
             itemName: text.MenuItem_itemName_Gallery,
-            linkName: '/',
+            linkName: '/gallery',
         },
         webdev: { 
             iconName: 'icon-laptop',

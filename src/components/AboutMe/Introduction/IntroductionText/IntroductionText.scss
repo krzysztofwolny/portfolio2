@@ -2,33 +2,8 @@
 
 .introductionText {
     color: $color-primary;
-    font-size: 1.1vw;
+    font-size: 1.45rem;
     line-height: 1.9;
-    width: 90%;
-    height: 30%;
-    padding-top: 8%;
     text-align: left;
-
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 1.25vw;
-    }
-
-    @media only screen and (max-width: 1000px) and (min-width: $bp-medium-small) {
-        font-size: 1.5rem;
-        width: 80%;
-        margin-top: 4rem;
-        margin-left: 4rem;
-    }
-
-    @media only screen and (max-width: $bp-medium-small) {
-        font-size: 1.8vw;
-    }
-
-    @media only screen and (max-width: $bp-phone) {
-        font-size: 1.2rem;
-    }
-
-    @media only screen and (max-width: $bp-phone-small) {
-        font-size: 0.8rem;
-    }
+    padding: 6rem;
 }

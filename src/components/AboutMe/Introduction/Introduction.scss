@@ -9,7 +9,7 @@
     margin: 3rem;
     border-radius: 4rem;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
-
+    
     @media only screen and (max-width: $bp-medium) {
         background-image: linear-gradient( rgba(255, 255, 255, 1), rgba(255, 255, 255,.8)), url(../../../assets/img/aboutme_background-phone.jpg);
     }
