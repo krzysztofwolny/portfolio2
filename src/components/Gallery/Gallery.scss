@@ -1,3 +1,16 @@
 @import '../../assets/scss/variables';
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
 
+.gallery {
+    width: calc(100vw - 10rem);
+    background-image: linear-gradient( rgba(255, 255, 255,.8), rgba(255, 255, 255,.4)), url(../../assets/img/aboutme_background-medium.jpg);
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 100vw;
+        background-image: linear-gradient( rgba(255, 255, 255,.8), rgba(255, 255, 255,.4)), url(../../assets/img/aboutme_background-phone.jpg);
+    }
+}
+
+.image-gallery-image {
+    max-height: calc(100vh - 115px) !important;
+}

@@ -18,7 +18,12 @@ const Gallery = () => {
     };
 
     return(
-        <ImageGallery items={photosListGenerator()} />
+        <div className="gallery">
+                    <ImageGallery   items={photosListGenerator()} 
+                        thumbnailPosition="bottom" 
+                        showPlayButton={false}
+                        showBullets={true} />
+        </div>
     );
 }
 

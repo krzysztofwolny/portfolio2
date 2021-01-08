@@ -21,7 +21,7 @@ const menuItemsList = () => {
         webdev: { 
             iconName: 'icon-laptop',
             itemName: text.MenuItem_itemName_WebDev,
-            linkName: '/',
+            linkName: '/webapps',
         },
         contact: { 
             iconName: 'icon-paper-plane',
