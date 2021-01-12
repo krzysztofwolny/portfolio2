@@ -61,6 +61,10 @@ const langEN = {
     ContactModal_Response_Success: 'Thanks for sending me a message. I will response as soon as passible.',
     ContactModal_Response_Fail: 'Something went wrong!',
     Stack_mainLabel: 'Technologies that I use.',
+    WebApps_mainLabel: 'Search by tags.',
+    WebApps_work1_description: 'Shop developed for Gloss Cosmetics',
+    WebApps_work2_description: 'Shop developed for ScandiRoom',
+    WebApps_work3_description: 'React app developed for react course purpose',
 }
 
 export default langEN;

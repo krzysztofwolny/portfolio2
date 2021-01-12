@@ -61,6 +61,10 @@ const langPL = {
     ContactModal_Response_Success: 'Dziękuję za wiadomość! Odpowiem najszybciej jak to będzie możliwe.',
     ContactModal_Response_Fail: 'Niestety, nie udało się wysłać wiadomości.',
     Stack_mainLabel: 'Technologie, z których korzystam.',
+    WebApps_mainLabel: 'Wyszukaj po tagach.',
+    WebApps_work1_description: 'Sklep stworzony dla Gloss Cosmetics',
+    WebApps_work2_description: 'Sklep stworzony dla ScandiRoom',
+    WebApps_work3_description: 'Aplikacja React stworzona na potrzeby kursu',
 }
 
 export default langPL;

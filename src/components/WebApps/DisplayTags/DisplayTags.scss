@@ -1,4 +1,21 @@
+@import '../../../assets/scss/variables';
+
 .displayTags {
     width: 100%;
-    border: 1px solid black;
+
+    &__mainLabel {
+        font-size: 2rem;
+        color: $color-primary;
+        margin: 2rem;
+        margin-left: 3rem;
+    }
+
+    &__tagsContainer {
+        margin: 2rem;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }

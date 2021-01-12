@@ -2,11 +2,23 @@ import React from 'react';
 import './DisplayWorks.scss';
 import WorkItem from './WorkItem/WorkItem';
 
-const DisplayWorks = () => {
+const DisplayWorks = (props) => {
+
+    const printWorks = (works) => {
+        return(
+            works.map(el => {
+                if(el.display) {
+                    return(
+                        <WorkItem work={el} />
+                    );
+                }
+            })
+        );
+    }
+
     return(
         <div className="displayWorks">
-            DisplayWorks
-            <WorkItem />
+            {printWorks(props.works)}
         </div>
     );
 };

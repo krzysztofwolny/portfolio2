@@ -1,6 +1,27 @@
 @import '../../../../assets/scss/variables';
 
 .tag {
+    color: white;
     width: 80px;
-    border: 1px solid black;
+    background-color: $color-primary;
+    border-radius: 10rem;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    transition: transform .2s;
+
+    &:hover {
+        -webkit-font-smoothing: subpixel-antialiased;
+        backface-visibility: hidden;
+        transform: scale(1.098) translate3d(0, 0, 0);
+        transform-origin: 50.019% 0;
+    }
+ 
+    &__active {
+        background-color: $color-primary-darker;
+    }
+
+    &__name {
+        margin: .5rem;
+        text-align: center;
+    }
 }

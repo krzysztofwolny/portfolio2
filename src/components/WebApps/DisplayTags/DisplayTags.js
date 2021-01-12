@@ -1,8 +1,11 @@
 import React from 'react';
 import './DisplayTags.scss';
 import Tag from './Tag/Tag';
+import displayLanguage from '../../../translations/translations';
 
 const DisplayTags = ({tagsToDisplay, chooseTags}) => {
+    const text = displayLanguage();
+
     const showTags = () => {
         const tags = tagsToDisplay.map( el => <Tag tagName={el} clickFunc={chooseTags} />)
         return tags;
@@ -10,8 +13,8 @@ const DisplayTags = ({tagsToDisplay, chooseTags}) => {
 
     return(
         <div className="displayTags">
-            DisplayTags
-            {showTags()}
+            <p className="displayTags__mainLabel">{text.WebApps_mainLabel}</p>
+            <div className="displayTags__tagsContainer">{showTags()}</div>
         </div>
     );
 };
