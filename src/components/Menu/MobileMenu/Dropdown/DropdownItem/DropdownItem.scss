@@ -5,6 +5,9 @@
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     transition: all .3s;
+    
+    display: flex;
+    justify-content: space-around;
 
     &:not(:last-child) {
         border-bottom: 1px solid $color-primary;
@@ -14,8 +17,12 @@
         box-shadow: 1px 1px 18px $color-white inset;
     }
 
-    display: flex;
-    justify-content: space-around;
+    &__link {
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+    }
 
     &__svg {
         height: 4rem;
