@@ -9,12 +9,12 @@ const SwitchLanguage = () => {
     const text = displayLanguage();
     const options = [
         {
-            value: 'pl',
-            label: 'Polski'
-        },
-        {
             value: 'en',
             label: 'English'
+        },
+        {
+            value: 'pl',
+            label: 'Polski'
         }
     ];
 

@@ -1,4 +1,5 @@
 @import '../../../assets/scss/variables';
+@import '../../../assets/scss/animations'; 
 
 .stackItem {
    width: 100%;
@@ -9,43 +10,13 @@
    justify-content: center;
    align-items: center;
 
+   animation-name: bounceEnter;
+   animation-duration: .5s;
+
    &:hover .stackItem__img {
       animation-name: leftToRight;
       animation-duration: 1.2s;
       animation-direction: alternate;
-      
-
-      @keyframes leftToRight {
-         0% {
-            transform:  translateX(0%)
-                        translateY(0%);
-            opacity: 1;
-         }
-
-         40% {
-            transform:  translateX(150%)
-                        translateY(0%);
-            opacity: 0;
-         }
-
-         44% {
-            transform:  translateX(0%)
-                        translateY(-150%);
-            opacity: 0;
-         }
-
-         48% {
-            transform:  translateX(-170%)
-                        translateY(0%);
-            opacity: 0;
-         }
-
-         100% {
-            transform:  translateX(0%) 
-                        translateY(0%);
-            opacity: 1;
-         }
-      }
    }
 
    &__img {

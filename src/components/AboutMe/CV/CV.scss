@@ -1,4 +1,5 @@
 @import '../../../assets/scss/variables';
+@import '../../../assets/scss/animations';
 
 .cv {
     grid-row: 2 / -1;
@@ -9,6 +10,13 @@
     border-radius: 4rem;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
     overflow: scroll;
+
+    animation-name: bounceEnter3;
+    animation-duration: .8s;
+
+    &:hover {
+      box-shadow: 3px 3px 10px $color-primary;
+  }
 
     @media only screen and (max-width: $bp-medium-small) {
 
@@ -107,7 +115,9 @@ Main components
     margin-top: 15px;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 }
 

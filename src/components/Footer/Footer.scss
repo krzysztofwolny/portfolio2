@@ -1,0 +1,16 @@
+@import '../../assets/scss/animations';
+@import '../../assets/scss/variables';
+
+.footer {
+    display: none; 
+    width: 100%;
+    height: 100px;
+    background-color: $color-menu-background;
+
+    grid-row: 3 / 4;
+
+    
+    @media only screen and (max-width: $bp-medium) {
+        display: inline-block;
+    }
+}

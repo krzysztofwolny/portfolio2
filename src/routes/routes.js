@@ -5,6 +5,7 @@ import Contact from '../components/Contact/Contact';
 import ControlPanel from '../containers/ControlPanel/ControlPanel';
 import Gallery from '../components/Gallery/Gallery';
 import WebApps from '../components/WebApps/WebApps';
+import Footer from '../components/Footer/Footer';
 
 const routes = {
     "/": () => <div className="container"><ControlPanel /><AboutMe /></div>,

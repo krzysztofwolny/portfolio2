@@ -2,12 +2,13 @@ import React from 'react';
 import './DisplayTags.scss';
 import Tag from './Tag/Tag';
 import displayLanguage from '../../../translations/translations';
+import { setLinkProps } from 'hookrouter';
 
 const DisplayTags = ({tagsToDisplay, chooseTags}) => {
     const text = displayLanguage();
 
     const showTags = () => {
-        const tags = tagsToDisplay.map( el => <Tag tagName={el} clickFunc={chooseTags} />)
+        const tags = tagsToDisplay.map( el => <Tag tagName={el} clickFunc={chooseTags}/>)
         return tags;
     };
 

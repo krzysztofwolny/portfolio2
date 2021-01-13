@@ -4,6 +4,7 @@
 .gallery {
     width: calc(100vw - 10rem);
     background-image: linear-gradient( rgba(255, 255, 255,.8), rgba(255, 255, 255,.4)), url(../../assets/img/aboutme_background-medium.jpg);
+    background-repeat: no-repeat;
 
     @media only screen and (max-width: $bp-medium) {
         width: 100vw;

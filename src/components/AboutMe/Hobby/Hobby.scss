@@ -1,4 +1,5 @@
 @import '../../../assets/scss/variables';
+@import '../../../assets/scss/animations';
 
 .hobby {
     grid-row: 3 / 4;
@@ -9,10 +10,17 @@
     border-radius: 4rem;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
 
+    animation-name: bounceEnter3;
+    animation-duration: .8s;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    &:hover {
+        box-shadow: 3px 3px 10px $color-primary;
+    }
 
 
     &__label {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './WebApps.scss';
 import DisplayTags from './DisplayTags/DisplayTags';
 import DisplayWorks from './DisplayWorks/DisplayWorks';
+import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 const WebApps = () => {
     const [tagsState, setTagsState] = useState([]);
@@ -39,6 +40,8 @@ const WebApps = () => {
     ]);
     const [freshTagsState, setFreshTagsState] = useState(true);
 
+    const [rerenderAllWorkItems, setRerenderAllWorkItems] = useState(true);
+
     const tagsInputCreator = (worksInput) => {
         const tagsArray = [];
         worksInput.map(el => {
@@ -67,6 +70,7 @@ const WebApps = () => {
             tagsStateCopy.push(choosenTagName);
             setTagsState([...tagsStateCopy]);
         };
+        setRerenderAllWorkItems(!rerenderAllWorkItems);
     };
 
     //set display property to true only for works which have tags that are choosen
@@ -127,12 +131,16 @@ const WebApps = () => {
         prepWorksToDisplay();
     }, [tagsState]);
 
-    console.log(tagsState);
+    console.log(rerenderAllWorkItems);
 
     return(
         <div className="webApps">
-            <DisplayTags tagsToDisplay={uniqueTagsFilter()} chooseTags={chooseTagsHandler} />
-            <DisplayWorks works={myWorks} />
+            <DisplayTags 
+            tagsToDisplay={uniqueTagsFilter()} 
+            chooseTags={chooseTagsHandler} />
+            <DisplayWorks 
+            works={myWorks}
+            rerender={rerenderAllWorkItems} />
         </div>
     );
 };

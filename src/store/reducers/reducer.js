@@ -1,7 +1,7 @@
 import * as actionType from '../actions/actionTypes';
 
 const initialState = {
-    language: 'pl'
+    language: 'en'
 }
 
 const changeLaunguage = (state, curLang) => {

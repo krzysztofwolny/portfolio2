@@ -8,6 +8,7 @@ const langPL = {
     MenuItem_itemName_Gallery: 'Galeria',
     MenuItem_itemName_WebDev: 'Aplikacje',
     MenuItem_itemName_Contact: 'Kontakt',
+    AboutMe_mainLabel: 'Pozwól, że się przedstawię :)',
     Introduction_Text: 'Mam na imię Krzysztof i od 2015 roku zajmuję się budowaniem stron i sklepów internetowych opartych o Wordpress i Prestashop. Obecnie poszukuję pracy jako React Developer. Zapraszam do zapoznania się z moim portfolio i do kontaktu ze mną.',
     Hobby_label: 'Zainteresowania',
     HobbyItem_itemName_History: 'Historia',

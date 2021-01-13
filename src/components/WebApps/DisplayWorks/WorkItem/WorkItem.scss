@@ -1,4 +1,5 @@
 @import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/animations';
 
 .workItem {
     width: 25rem;
@@ -12,6 +13,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+
+    &__rerender {
+        animation-name: bounceEnter;
+        animation-duration: 1s;
+    }
+
+    &__rerender1 {
+        animation-name: bounceEnter2;
+        animation-duration: 1s;
+    }
 
     &:hover {
         transform: scale(1.1);
