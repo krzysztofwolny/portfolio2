@@ -89,7 +89,6 @@ const Contact = () => {
             ...copyMessageToSend,
             [id]: el.target.value,
         });
-        console.log(messageToSend);
     };
 
     const modalOff = () => {
@@ -123,7 +122,6 @@ const Contact = () => {
         const emailValidator = () => {
             const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             const validationEmailCheck = re.test(String(messageToSend.email).toLowerCase());
-            console.log(validationEmailCheck);
             if (validationEmailCheck) {
                 return 1;
             } else {
@@ -150,7 +148,6 @@ const Contact = () => {
                 });
         }
         validationInformation();
-        console.log(readyToSend);
         return readyToSend;
     };
 

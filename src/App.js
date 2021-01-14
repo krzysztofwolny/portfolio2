@@ -22,6 +22,7 @@ function App() {
       <div className="container">
         <ControlPanel />
         <Route exact path="/" component={home} />
+        <Route path="/portfolio" component={home} />
         <Route path="/stack" component={stack} />
         <Route path="/gallery" component={gallery} />
         <Route path="/webapps" component={webApps} />
