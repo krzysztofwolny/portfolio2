@@ -1,5 +1,5 @@
 import './App.scss';
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import AboutMe from './components/AboutMe/AboutMe';
 import Stack from './components/Stack/Stack';
@@ -18,7 +18,7 @@ const webApps = () => <WebApps />;
 function App() {
   //const routeResult = useRoutes(routes);
   return(
-    <HashRouter basename="/">
+    <BrowserRouter basename="/">
       <div className="container">
         <ControlPanel />
         <Route exact path="/" component={home} />
@@ -27,7 +27,7 @@ function App() {
         <Route path="/webapps" component={webApps} />
         <Route path="/contact" component={contact} />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

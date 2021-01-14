@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './WebApps.scss';
 import DisplayTags from './DisplayTags/DisplayTags';
 import DisplayWorks from './DisplayWorks/DisplayWorks';
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 const WebApps = () => {
     const [tagsState, setTagsState] = useState([]);
@@ -10,31 +9,61 @@ const WebApps = () => {
         {
             workID: 1,
             workName: 'glosscosmetics.no',
-            description: 'WebApps_work1_description',
-            img: 'glosscosmetics.jpg',
-            liveLink: 'https://www.glosscosmetics.no',
-            githubLink: null,
-            tags: ['prestashop', 'commercial', 'html', 'react'],
+            description: 'WebApps_work4_description',
+            img: 'myportfolio.jpg',
+            liveLink: 'https://krzysztofwolny.github.io/portfolio/',
+            githubLink: 'https://github.com/krzysztofwolny/portfolio2',
+            tags: ['html', 'scss', 'JavaScript', 'React', 'npm', 'own project'],
             display: true
         },
         {
             workID: 2,
-            workName: 'scandiroom.no',
-            description: 'WebApps_work2_description',
-            img: 'scandiroom.jpg',
-            liveLink: 'https://www.scandiroom.no',
-            githubLink: 'link',
-            tags: ['wordpress', 'commercial', 'css'],
+            workName: 'glosscosmetics.no',
+            description: 'WebApps_work1_description',
+            img: 'glosscosmetics.jpg',
+            liveLink: 'https://www.glosscosmetics.no',
+            githubLink: null,
+            tags: ['prestashop', 'commercial', 'html', 'css'],
             display: true
         },
         {
             workID: 3,
+            workName: 'scandiroom.no',
+            description: 'WebApps_work2_description',
+            img: 'scandiroom.jpg',
+            liveLink: 'https://www.scandiroom.no',
+            githubLink: null,
+            tags: ['prestashop', 'commercial', 'html', 'css', 'freelance'],
+            display: true
+        },
+        {
+            workID: 4,
             workName: 'sweetkiddy.pl',
             description: 'WebApps_work3_description',
             img: 'sweetkiddy.jpg',
             liveLink: 'https://www.sweetkiddy.pl',
             githubLink: null,
-            tags: ['react', 'javascript', 'own project', 'css'],
+            tags: ['prestashop', 'commercial', 'html', 'css', 'freelance'],
+            display: true
+        },
+        {
+            workID: 5,
+            workName: 'Burger Builder',
+            description: 'WebApps_work5_description',
+            img: 'burger.jpg',
+            liveLink: null,
+            githubLink: 'https://github.com/krzysztofwolny/burgerbuilder',
+            tags: ['React', 'html', 'css', 'redux'],
+            display: true
+        },
+        {
+            workID: 6,
+            workName: 'Emaily',
+            description: 'WebApps_work6_description',
+            img: 'emaily.jpg',
+            liveLink: null,
+            githubLink: 'https://github.com/krzysztofwolny/emaily',
+            tags: ['React', 'redux', 'mongoDB', 'mongoose', 'node.js', 'express'],
             display: true
         },
     ]);
@@ -130,8 +159,6 @@ const WebApps = () => {
         hideAllWorks();
         prepWorksToDisplay();
     }, [tagsState]);
-
-    console.log(rerenderAllWorkItems);
 
     return(
         <div className="webApps">

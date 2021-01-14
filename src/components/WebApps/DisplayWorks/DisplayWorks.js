@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './DisplayWorks.scss';
 import WorkItem from './WorkItem/WorkItem';
 
@@ -8,7 +8,7 @@ const DisplayWorks = (props) => {
             works.map(el => {
                 if(el.display) {
                     return(
-                        <WorkItem work={el} rerender={props.rerender} />
+                        <WorkItem key={el.workID} work={el} rerender={props.rerender} />
                     );
                 }
             })

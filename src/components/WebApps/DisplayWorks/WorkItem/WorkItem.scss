@@ -36,17 +36,18 @@
 
     &__desc {
         height: 30%;
+        padding: .6rem;
         color: $color-primary;
-        font-size: 1.3rem;
+        font-size: 1.15rem;
         text-align: center;
     }
 
     &__tags {
         display: flex;
-        justify-content: space around;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        height: 10%;
+        height: 17%;
     }
 
     &__tag {

@@ -59,25 +59,25 @@ const CV = () => {
 	const jobListGenerator = (jobList) => {
 		const output = jobList.map(el => {
 			return(
-				<React.Fragment>
-				<div class="cd-timeline-block">
-					<div class="cd-timeline-img cd-picture">
+				<React.Fragment key={el.company}>
+				<div key={el.company} className="cd-timeline-block">
+					<div className="cd-timeline-img cd-picture">
 					</div>
 
-					<div class="cd-timeline-content">
+					<div className="cd-timeline-content">
 						<h2 className="timeline-company-name">{el.company}</h2>
-						<div class="timeline-content-info">
-							<span class="timeline-content-info-title">
-								<i class="fa fa-certificate" aria-hidden="true"></i>
+						<div className="timeline-content-info">
+							<span className="timeline-content-info-title">
+								<i className="fa fa-certificate" aria-hidden="true"></i>
 								{el.position}
 							</span>
-						<span class="timeline-content-info-date">
-							<i class="fa fa-calendar-o" aria-hidden="true"></i>
+						<span className="timeline-content-info-date">
+							<i className="fa fa-calendar-o" aria-hidden="true"></i>
 							{el.period}
 						</span>
 					</div>
 					<p>{el.text}</p>
-					<ul class="content-skills">
+					<ul className="content-skills">
 						{Object.keys(el.skills).map(skill => {
 							return(
 								<li>{el.skills[skill]}</li>
@@ -94,7 +94,7 @@ const CV = () => {
 
     return(
         <div className="cv">
-			<section id="cd-timeline" class="cd-container">
+			<section id="cd-timeline" className="cd-container">
 				{jobListGenerator(jobsList)}
 			</section>
         </div>

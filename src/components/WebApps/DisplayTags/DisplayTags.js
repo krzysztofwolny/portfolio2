@@ -8,7 +8,7 @@ const DisplayTags = ({tagsToDisplay, chooseTags}) => {
     const text = displayLanguage();
 
     const showTags = () => {
-        const tags = tagsToDisplay.map( el => <Tag tagName={el} clickFunc={chooseTags}/>)
+        const tags = tagsToDisplay.map( el => <Tag key={el} tagName={el} clickFunc={chooseTags}/>)
         return tags;
     };
 

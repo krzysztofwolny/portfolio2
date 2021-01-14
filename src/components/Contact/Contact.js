@@ -69,7 +69,7 @@ const Contact = () => {
                 <React.Fragment>
                     <label className="contact__label" for={fieldsData[el].labelFor}>{fieldsData[el].inputLabel} {fieldValidation}</label>
                     <CustomTag 
-                        className={'contact__input' + ' ' + fieldsData[el].class}
+                        className={`contact__input ${fieldsData[el].class}`}
                         value={fieldsData[el].inputValue}
                         type={fieldsData[el].inputType} 
                         id={fieldsData[el].inputName} 

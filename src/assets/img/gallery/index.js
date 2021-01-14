@@ -17,7 +17,7 @@ export { html5, css3, js, sass, react, redux, node, express, mongoDB, git, npm, 
 
 const importAllImages = (r) => {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item, index) => images[item.replace('./', '')] = r(item) );
     //const imagesNames = Object.keys(images);
     return images;
 }

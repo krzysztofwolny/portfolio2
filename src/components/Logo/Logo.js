@@ -7,7 +7,7 @@ const Logo = () => {
     const text = displayLanguage();
     return(
         <div className="logo">
-            <img src={myphoto} className="logo__photo"></img>
+            <img src={myphoto} className="logo__photo" alt="Photography"></img>
             <p className="logo__name">Krzysztof Wolny</p>
             <p className="logo__ocupation">{text.Logo_occupation}</p>
         </div>

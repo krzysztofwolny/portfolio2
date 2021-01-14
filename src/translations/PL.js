@@ -63,9 +63,12 @@ const langPL = {
     ContactModal_Response_Fail: 'Niestety, nie udało się wysłać wiadomości.',
     Stack_mainLabel: 'Technologie, z których korzystam.',
     WebApps_mainLabel: 'Wyszukaj po tagach.',
-    WebApps_work1_description: 'Sklep stworzony dla Gloss Cosmetics',
-    WebApps_work2_description: 'Sklep stworzony dla ScandiRoom',
-    WebApps_work3_description: 'Aplikacja React stworzona na potrzeby kursu',
+    WebApps_work1_description: 'Sklep stworzony dla Gloss Cosmetics. Moim zadaniem było rozwijanie tej platformy ecommerce oraz zapewnienie wysokiej jakości grafik oraz fotografii produktowych.',
+    WebApps_work2_description: 'Sklep z artykułami dla dzieci stworzony dla ScandiRoom. Moim zadaniem było wykonanie sklepu oraz późniejsza obsługa techniczna.',
+    WebApps_work3_description: 'Sklep z artykułami dla dzieci stworzony dla SweetKiddy. Moim zadaniem było wykonanie sklepu oraz późniejsza obsługa techniczna.',
+    WebApps_work4_description: 'Moje porfolio. Stworzyłem je w ramach nauki z wykorzystaniem html5, scss, React.',
+    WebApps_work5_description: 'Aplikacja React napisana w trakcie kursu. Wykorzystuje Redux.',
+    WebApps_work6_description: 'Aplikacja fullstack służąca do wysyłki maili oraz zbierania odpowiedzi od kientów. Napisana w ramach kursu. Wykonany został zarówno frontend jak i backend. Wykorzystuje m. in. node.js, express, mongoDB, sendgrid, passport.',
 }
 
 export default langPL;

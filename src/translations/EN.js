@@ -63,9 +63,12 @@ const langEN = {
     ContactModal_Response_Fail: 'Something went wrong!',
     Stack_mainLabel: 'Technologies that I use.',
     WebApps_mainLabel: 'Search by tags.',
-    WebApps_work1_description: 'Shop developed for Gloss Cosmetics',
-    WebApps_work2_description: 'Shop developed for ScandiRoom',
-    WebApps_work3_description: 'React app developed for react course purpose',
+    WebApps_work1_description: 'E-commerce platform for Gloss Cosmetics. My duties was to develop the platform, maintain it. Aditionaly I was obligated to provide high guality graphics and product photography.',
+    WebApps_work2_description: 'Shop for parents developed for ScandiRoom. My job was to develop and then maintain this platform.',
+    WebApps_work3_description: 'Shop for parents developed for SweetKiddy. My job was to develop and then maintain this platform.',
+    WebApps_work4_description: 'My own porfolio. Created in learning purposes with usage of html5, scss, React.',
+    WebApps_work5_description: 'React application created for learning purposes during course. It also uses Redux.',
+    WebApps_work6_description: 'React an application that sends e-mails and collects a reply. Written as part of the course. Both frontend and backend were made. It uses, among others node.js, express, mongoDB, sendgrid, passport.',
 }
 
 export default langEN;

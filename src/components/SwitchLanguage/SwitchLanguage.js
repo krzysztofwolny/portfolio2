@@ -27,7 +27,7 @@ const SwitchLanguage = () => {
             <p className="SwitchLanguage__label">{text.SwitchLanguage_chooseLanguage}</p>
             <select className="SwitchLanguage__select" onChange={chandleChange}>
                 {options.map(option => (
-                    <option value={option.value}>{option.label}</option>
+                    <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
             </select>
         </div>
