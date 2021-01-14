@@ -109,7 +109,7 @@ const WebApps = () => {
             const copyTagsState = [...tagsState];
             let newState = [];
             copyMyWorks.map( el => {
-                const check = copyTagsState.some(val => el.tags.indexOf(val) !== -1);
+                const check = copyTagsState.every(val => el.tags.indexOf(val) !== -1);
                 if(check) {
                     const newItem = {
                         ...el,
