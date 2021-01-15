@@ -12,6 +12,10 @@
     justify-content: center;
     grid-auto-rows: 100rem;
 
+    @media only screen and (max-width: $bp-medium-small) {
+        grid-template-rows: 10% 20% 20%;
+    }
+
     @media only screen and (max-width: $bp-phone) {
         background-image: linear-gradient( rgba(255, 255, 255,.95), rgba(255, 255, 255,.56)), url(../../assets/img/aboutme_background-small.jpg);
     }

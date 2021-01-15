@@ -3,7 +3,7 @@
 
 .workItem {
     width: 25rem;
-    height: 350px;
+    height: 390px;
     border-radius: 1rem;
     margin: 2rem;
     box-shadow: 5px 5px 17px -10px black;
@@ -47,15 +47,16 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        height: 17%;
+        height: 19%;
     }
 
     &__tag {
         color: white;
         background-color: $color-primary;
-        border-radius: 5px;
+        border-radius: 7px;
         padding: 2px;
         margin: 2px;
+        font-size: 1.2rem;
     }
 
     &__buttons {
@@ -70,12 +71,13 @@
     }
 
     &__button {
-        width: 60px;
-        height: 25px;
+        width: 70px;
+        height: 35px;
+        font-size: 1.6rem;
         background-color: $color-white;
         border: 1px solid $color-primary;
         margin-right: 1rem;
-        border-radius: 1rem;
+        border-radius: 1.6rem;
 
         a:link,
         a:active,
