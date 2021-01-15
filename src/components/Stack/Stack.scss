@@ -45,7 +45,7 @@
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         grid-template-rows: repeat(auto-fit, minmax(45%, 1fr));
         grid-gap: 2rem;
-        grid-auto-rows: 130px;
+        grid-auto-rows: 45%;
 
         @media only screen and (max-width: $bp-phone) {
             margin-top: -160%;

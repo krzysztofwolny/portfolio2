@@ -18,7 +18,7 @@ const webApps = () => <WebApps />;
 function App() {
   //const routeResult = useRoutes(routes);
   return(
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/portfolio">
       <div className="container">
         <ControlPanel />
         <Route exact path="/" component={home} />
