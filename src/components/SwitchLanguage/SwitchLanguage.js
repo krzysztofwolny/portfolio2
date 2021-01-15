@@ -19,6 +19,7 @@ const SwitchLanguage = () => {
     ];
 
     const chandleChange = (event) => {
+        console.log(event.target.value);
         onLanguageChange(langAction.changeLanguageAction(event.target.value));
     };
     

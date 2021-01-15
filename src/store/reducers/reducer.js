@@ -5,6 +5,7 @@ const initialState = {
 }
 
 const changeLaunguage = (state, curLang) => {
+    console.log(state);
     let updatedState = { ...state };
     updatedState = { language: curLang};
     return updatedState;
